@@ -1,1 +1,1 @@
-# wpjwst-picturerights
+# MediaRight Management Tool for Wordpress (wpjwst-picturerights)
