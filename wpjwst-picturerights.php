@@ -12,13 +12,22 @@ Text Domain:  mrmt
 Domain Path:  /languages
 */
 
-/**
-Alle Funktionen welche (de)-installiert werden müssen, sind hier zu impementieren. 
-*/
-function install(){
-    return null;
-}
+include_once 'inc/inputrights.class.php';
 
-function uninstall(){
-    return null;
+class WPMediaRights{
+	
+	public function __construct(){
+		// Init all functions in classes
+		new InputRights();
+	}
+	
+	public function _init(){
+		return null;
+	}
+
+	function uninstall(){
+		return null;
+	}
 }
+new WPMediaRights();
+
