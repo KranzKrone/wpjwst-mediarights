@@ -6,7 +6,6 @@
  * @param $post object, attachment record in database
  * @return $form_fields, modified form fields
  *
- * Based on https://www.wpbeginner.com/wp-tutorials/how-to-add-additional-fields-to-the-wordpress-media-uploader/
  */
 
 class InputRights { 
