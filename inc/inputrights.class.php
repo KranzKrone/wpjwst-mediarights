@@ -21,15 +21,13 @@ class InputRights {
 			'input' => 'text',
 			'value' => get_post_meta( $post->ID, 'mediaright-name', true ),
 			'helps' => 'If provided, photo credit will be displayed',
-			'required' => true,
 		);
 
-		$form_fields['mediaright-name'] = array(
+		$form_fields['mediaright-url'] = array(
 			'label' => 'MediaRight Owner URL',
 			'input' => 'text',
 			'value' => get_post_meta( $post->ID, 'mediaright-url', true ),
 			'helps' => 'If provided, photo credit will be displayed',
-			'required' => true,
 		);
 
 		$form_fields['photographer-name'] = array(
@@ -59,7 +57,10 @@ class InputRights {
 	public function attachment_field_credit_save( $post, $attachment ) {
 		if( isset( $attachment['mediaright-name'] ) )
 			update_post_meta( $post['ID'], 'mediaright-name', $attachment['mediaright-name'] );
-		
+
+		if( isset( $attachment['mediaright-url'] ) )
+			update_post_meta( $post['ID'], 'mediaright-url', $attachment['mediaright-url'] );
+
 		if( isset( $attachment['photographer-name'] ) )
 			update_post_meta( $post['ID'], 'photographer_name', $attachment['photographer-name'] );
 	 
