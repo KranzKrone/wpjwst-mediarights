@@ -23,7 +23,15 @@ class InputRights {
 			'helps' => 'If provided, photo credit will be displayed',
 			'required' => true,
 		);
-		
+
+		$form_fields['mediaright-name'] = array(
+			'label' => 'MediaRight Owner URL',
+			'input' => 'text',
+			'value' => get_post_meta( $post->ID, 'mediaright-url', true ),
+			'helps' => 'If provided, photo credit will be displayed',
+			'required' => true,
+		);
+
 		$form_fields['photographer-name'] = array(
 			'label' => 'Photographer Name',
 			'input' => 'text',
